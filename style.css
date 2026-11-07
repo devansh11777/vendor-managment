@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg,#ffffff, #FF8C00);
+}
+/**Main div contains everything**/
+.container {
+  width: 95%;
+  /* #00fff7, #02e693, #00d0ff */
+  /* background: linear-gradient(135deg, #FF8C00, #928dab); */
+  height: 95%;
+  border: 5px;
+  border-radius: 1cm;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px;
+  /* box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5); */
+}
+/**universal selector for both the boxes **/
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45%;
+  height: 90%;
+  background: linear-gradient(135deg,#e2ab34, #FFB6C1);
+  /* background: radial-gradient(circle, rgba(255, 255, 255, 1) 20%, rgba(0, 0, 0, 1) 100%); */
+  
+  border: 3px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+  transition: 0.3s linear;
+  cursor: pointer;
+}
+.box:hover {
+  transform: scale(1.05) rotate(3deg);
+  
+}
+/**Text for Stationary**/
+.samagri {
+  font-family: "Bangers", system-ui;
+  font-weight: 200;
+  font-style: normal;
+  color: white;
+  font-size: 350%;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0,  10);
+  letter-spacing: 0.1cm;
+}
+/**text for Food**/
+.bhojan {
+  font-family: "Bangers", system-ui;
+  font-weight: 200;
+  font-style: normal;
+  color: white;
+  position: absolute;
+  font-size: 350%;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0,  10);
+  letter-spacing: 0.1cm;
+}
+
+/**Box for Stationary**/
+.gbox {
+  background: linear-gradient(135deg, #FFB6C1, #02b8f5);
+  border-radius: 1.5cm;
+
+}
+.ani{ 
+  transform: translateY(-50px);
+  
+  
+}
+.sbox
+{
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
+  border-radius: 1.5cm;
+}
+@media (max-width: 768px) {
+  .samagri {
+    font-family: "Bangers", system-ui;
+    font-weight: 200;
+    font-style: normal;
+    color: white;
+    font-size: 90%;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0,  10);
+    letter-spacing: 0.1cm;
+  }
+  .bhojan {
+    font-family: "Bangers", system-ui;
+    font-weight: 200;
+    font-style: normal;
+    color: white;
+
+    font-size: 90%;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0,  10);
+    letter-spacing: 0.1cm;
+  }
+}

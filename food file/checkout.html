@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shopping Cart</title>
+  <style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    margin-top: 59px;
+    padding: 0;
+  }
+  
+  .navbar {
+    position: fixed;
+    display: flex;
+    top: 0%;
+    justify-content: space-between;
+    background-color: orange;
+    padding: 10px 20px;
+    z-index: 999;
+    width: 100%;
+    align-items: center;
+ 
+  }
+
+  .nav-left button,
+  .nav-right span {
+    background: none;
+    border: none;
+    font-size: 16px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  .search-box {
+    width: 50%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    background-color: #fff;
+  }
+  
+  .cart-section {
+    flex: 2;
+    padding: 10px;
+  }
+  
+  .cart-item {
+    display: flex;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .product-image {
+    width: 150px;
+    height: 150px;
+    background-color: #d3d3d3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+  }
+  
+  .product-details {
+
+   display: flex;
+   
+   width: 100%;
+   justify-content: space-between;
+  }
+  .checkbox
+  {
+    
+  }
+  .qty {
+    width: 30px;
+    text-align: center;
+    margin: 0 5px;
+  }
+  
+  .buttons {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .add {
+    background-color: #ffc107;
+    color: black;
+    padding: 10px 30px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .remove {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .payout-section {
+    position: sticky;
+    flex: 1;
+    background-color: #ffffff;
+    padding: 20px;
+    border: none;
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.3);
+    height: fit-content;
+  }
+  
+  .payout-section h2 {
+    margin-top: 0;
+  }
+  
+  .price {
+    float: right;
+  }
+  
+  .total {
+    margin-top: 40px;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: right;
+  }
+  
+  </style>
+
+</head>
+<body>
+   <header class="navbar">
+    <div class="nav-left">
+      <button>home</button>
+      <button>category</button>
+    </div>
+    <input type="text" placeholder="Search your product" class="search-box" />
+    <div class="nav-right">
+      <span class="user-icon">👤</span>
+    </div>
+  </header>
+
+  <div class="container">
+    <!-- Cart Section -->
+    <div class="cart-section">
+      <h2>cart</h2>
+      <div class="cart-item">
+        <img src="food asset/Ustaadi Hyderabadi Veg Biryani.avif" class="product-image">
+        <div class="product-details">
+          <div>
+          <p><strong>Veg biryani</strong></p>
+          <p>179₹/-</p>
+          <p>Quantity - 
+            <button>-</button>
+            <input type="text" value="1" class="qty" />
+            <button>+</button>
+            
+          </p>
+          </div>
+          <input class="checkbox" type="checkbox" checked />
+        </div>
+      </div>
+      <div class="buttons">
+        <button class="add">Add More</button>
+        <button class="remove">Remove</button>
+      </div>
+    </div>
+
+    <!-- Total Payout Section -->
+    <div class="payout-section">
+      <h2>Total payout</h2>
+      <p>1) Veg biryani <span class="price">179₹/-</span></p>
+      <div class="total">Total:- 179₹</div>
+    </div>
+  </div>
+  <script>
+    const removeBtn = document.querySelector('.remove');
+    const addMoreBtn = document.querySelector('.add');
+    const cartSection = document.querySelector('.cart-section');
+    const cartItem = document.querySelector('.cart-item');
+    const payoutSection = document.querySelector('.payout-section');
+    const checkbox = document.querySelector('.checkbox');
+  
+    removeBtn.addEventListener('click', () => {
+      if (checkbox.checked) {
+        cartItem.remove();
+        cartSection.innerHTML += `<p style="font-size: 18px; color: grey;">Cart is empty</p>`;
+        payoutSection.innerHTML = `<h2>Total payout</h2><p style="color: grey;">No items to display.</p>`;
+      }
+    });
+  
+    addMoreBtn.addEventListener('click', () => {
+      // You can replace this with your actual homepage link
+      window.location.href = "/Items/stationary.html"; 
+    });
+  </script>
+</body>
+</html>

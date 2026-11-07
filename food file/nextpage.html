@@ -1,0 +1,268 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NK Food Court</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+
+    body {
+      background-color: #f5f5f5;
+    }
+
+    /* ---------------- NAVBAR ---------------- */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background-color: white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      width: 30px;
+      height: 30px;
+      margin-right: 5px;
+    }
+
+    .search-bar {
+      flex: 1;
+      margin: 0 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .search-bar input {
+      width: 60%;
+      padding: 10px 15px;
+      border: 2px solid #aaa;
+      border-radius: 20px;
+      outline: none;
+      font-size: 14px;
+    }
+
+    .actions {
+      display: flex;
+      gap: 10px;
+    }
+
+    .actions img {
+      width: 40px;
+      height: 40px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 5px;
+      cursor: pointer;
+    }
+
+    .menu {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      background-color: transparent;
+      padding: 20px 10px;
+      flex-wrap: wrap;
+    }
+
+    .menu button {
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .menu button:hover {
+      background-color: #444;
+    }
+
+    /* ---------------- HEADER ---------------- */
+    .header {
+      padding: 20px;
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    /* ---------------- PRODUCT CARDS ---------------- */
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background-color: white;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .product-image {
+      width: 100%;
+      height: 150px;
+      background-color: #d3d3d3;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #555;
+      font-weight: bold;
+    }
+
+    .food-name {
+      font-weight: bold;
+      margin: 5px 0;
+    }
+
+    .price {
+      color: #333;
+      margin: 5px 0;
+    }
+
+    .order-btn {
+      margin-top: 10px;
+      background-color: #e65c00;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .order-btn:hover {
+      background-color: #e65c00;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <div class="logo">
+      <img src="https://via.placeholder.com/30" alt="Logo">
+      <span>our<br>Logo</span>
+    </div>
+
+    <div class="search-bar">
+      <input type="text" placeholder="Search for restaurant, cuisine or a dish">
+    </div>
+
+    <div class="actions">
+        
+      <img src="https://cdn-icons-png.flaticon.com/128/263/263142.png" alt="Cart">
+      <a href="/SIGN IN/LOGIN.html" target="_blank" class="login">
+      <img src="https://cdn-icons-png.flaticon.com/128/3064/3064197.png" alt="Login"></a>
+    </div>
+  </div>
+
+  <!-- MENU BUTTONS -->
+  <div class="menu">
+    <button>About</button>
+    <button>Menu</button>
+    <button>Gallery</button>
+    <button>Home</button>
+    <button>Health-Tips</button>
+    <button>Contact-us</button>
+  </div>
+
+  <!-- HEADER -->
+  <div class="header">NK FOOD COURT</div>
+
+  <!-- PRODUCT GRID -->
+  <div class="container">
+    <div class="card">
+      <img src="food asset/360_F_27579652_tM7V4fZBBw8RLmZo0Bi8WhtO2EosTRFD.jpg" class="product-image" alt="Pizza">
+      <div class="food-name">Pizza</div>
+      <div class="price">₹199</div>
+      <button class="order-btn">ORDER NOW</button>
+    </div>
+
+    <div class="card">
+      <img src="food asset/premium_photo-1683619761468-b06992704398.jpg" class="product-image" alt="Burger">
+      <div class="food-name">Burger</div>
+      <div class="price">₹149</div>
+      <button class="order-btn">ORDER NOW</button>
+    </div>
+
+    <div class="card">
+      <img src="food asset/Homemade-French-Fries_8.webp" class="product-image" alt="Fries">
+      <div class="food-name">French Fries</div>
+      <div class="price">₹99</div>
+      <button class="order-btn">ORDER NOW</button>
+    </div>
+
+    <div class="card">
+      <a href="descr.html" target="_blank" class="login"><img src="food asset/Ustaadi Hyderabadi Veg Biryani.avif" class="product-image" alt="Biryani"></a>
+      <div class="food-name">Veg Biryani</div>
+      <div class="price">₹179</div>
+      <button class="order-btn">ORDER NOW</button>
+    </div>
+
+    <div class="card">
+      <img src="food asset/White-Sauce-Paste-2-3.jpg" class="product-image" alt="Pasta">
+      <div class="food-name">White Sauce Pasta</div>
+      <div class="price">₹139</div>
+      <button class="order-btn">ORDER NOW</button>
+    </div>
+
+    <div class="card">
+      <img src="food asset/Gochujang-Noodles-Recipe-SQ.jpg" class="product-image" alt="Noodles">
+      <div class="food-name">Veg Noodles</div>
+      <div class="price">₹119</div>
+      <button class="order-btn">ORDER NOW</button>
+    </div>
+
+    <div class="card">
+      <img src="food asset/thali-feature.jpg" class="product-image" alt="Thali">
+      <div class="food-name">Veg Thali</div>
+      <div class="price">₹249</div>
+      <button class="order-btn">ORDER NOW</button>
+    </div>
+
+    <div class="card">
+        <img src="food asset/VegNews.OksanaKiian.Getty.jpg" class="product-image" alt="Thali">
+        <div class="food-name">Chole kulche</div>
+        <div class="price">₹249</div>
+        <button class="order-btn">ORDER NOW</button>
+      </div>
+
+    <div class="card">
+      <img src="food asset/Eat-the-Rainbow-Chopped-Salad-with-Basil-Mozzarella-4f304ec0564944f98016b36765124667.jpg" class="product-image" alt="Salad">
+      <div class="food-name">Fresh Salad</div>
+      <div class="price">₹89</div>
+      <button class="order-btn">ORDER NOW</button>
+    </div>
+
+    <div class="card">
+      <img src="food asset/Ultimate-Grilled-Cheese-Sandwich.jpg" class="product-image" alt="Sandwich">
+      <div class="food-name">Grilled Sandwich</div>
+      <div class="price">₹129</div>
+      <button class="order-btn">ORDER NOW</button>
+    </div>
+  </div>
+
+
+</body>
+</html> 

@@ -1,0 +1,311 @@
+* {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 5px;
+    gap:60%;
+    
+}
+
+.hehe{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 5px;
+    gap:100%;
+    padding-left: 2%;
+}
+.hoho{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 5px;
+    gap:20%;
+}
+.ptext{
+    font-weight:bolder;
+}
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  .slides {
+    position: relative;
+    width: 100%;
+    height: 320px;
+    
+    
+  }
+  
+  .slide {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+ 
+    
+  }
+  
+  .slide.active {
+    display: block;
+    
+  }
+  
+  
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    padding: 10px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+  
+.logo img {
+    height: 40px;
+    
+}
+
+.search-bar input {
+    padding: 8px;
+    width: 300px;
+    border-radius: .4cm;
+    margin-left: 40px;
+}
+
+nav {
+    
+    background-color: #f0f0f0;
+}
+
+nav a {
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+.search-bar input {
+    padding: 8px;
+    width: 300px;
+    border-radius: .4cm;
+}
+.filter-bar {
+    display: flex;
+    margin-bottom: 20px;
+    gap: 3cm;
+
+}
+
+.filter-bar button {
+    margin-right: 10px;
+    padding: 8px 15px;
+}
+
+.inspiration, .top-brands, .restaurants {
+    margin-bottom: 30px;
+}
+
+
+.inspiration-items, .brand-items {
+    display: flex;
+
+    overflow-x: auto;
+    gap: 10px;
+    
+}
+.item{
+    display: flex;
+    text-align: center;
+    /* border: 1px solid #ddd; */
+    background: #20d826;
+    width:fit-content;
+    height: 1000px;
+    
+    scale: 1;
+    transition: 0.3s linear;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 35%;
+   
+}
+.restaurant-items{
+    display: flex;
+
+    overflow-x: auto;
+    gap: 10px;
+    
+}
+
+
+
+.ttext {
+
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 120px;
+    width: 300px;
+    opacity: 02;
+    color: white;
+    position: relative;
+    top:18%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.ttext button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+}
+.ttext button:hover {
+    background-color: #20d826;
+}
+.item:hover{
+    /* scale: 1.1; */
+}
+.brand img{
+    width: 300px;
+    height: 300px;
+    
+}
+.restaurant img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    position: absolute;
+}
+
+.item img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    
+    position: absolute;
+}
+
+.restaurant-details {
+    text-align: left;
+}
+
+.promoted {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background-color: #f0f0f0;
+    padding: 2px 5px;
+    font-size: 0.8em;
+}
+
+.offer {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: red;
+    color: white;
+    padding: 2px 5px;
+    font-size: 0.8em;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+.login{
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(12, 230, 19); */
+   
+ 
+}
+.signup{
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(237, 243, 238);
+ 
+    border-radius: .4cm; */
+
+}
+.conveyor-belt {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    background: #f8f8f8;
+    padding: 10px 0;
+    position: relative;
+}
+
+.belt {
+    display: flex;
+    gap: 20px;
+    animation: moveBelt 10s linear infinite;
+    width: max-content; /* Allow it to extend */
+}
+.buttn button{
+    padding: 10px 20px;
+    color: #f4eded;
+    background: #333;
+    border-radius: 5px;
+}
+
+.bell{
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.belt div {
+    padding: 10px 20px;
+    background: red;
+    color: white;
+    border-radius: 5px;
+}
+
+/* Duplicate content for smooth looping */
+/* .belt::after {
+    content: attr(data-content);
+    display: flex;
+} */
+
+@keyframes moveBelt {
+    from {
+        transform: translateX(200%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
